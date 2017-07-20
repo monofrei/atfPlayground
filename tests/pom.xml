@@ -4,9 +4,13 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>playground</groupId>
+    <parent>
+        <groupId>playground</groupId>
+        <artifactId>ATF-Core</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+
     <artifactId>tests</artifactId>
-    <version>1.0-SNAPSHOT</version>
 
     <properties>
         <springVersion>4.3.7.RELEASE</springVersion>
@@ -20,7 +24,7 @@
 
     <dependencies>
         <dependency>
-            <groupId>org.testmonkeys</groupId>
+            <groupId>playground</groupId>
             <artifactId>selenium-engine</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
@@ -30,8 +34,6 @@
             <artifactId>logconfig</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
-
-
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-context</artifactId>
@@ -62,6 +64,7 @@
             <groupId>info.cukes</groupId>
             <artifactId>cucumber-jvm</artifactId>
             <version>${cucumberVersion}</version>
+            <type>pom</type>
         </dependency>
         <dependency>
             <groupId>info.cukes</groupId>
@@ -89,21 +92,21 @@
 
 
 
-    <build>
+    <!--<build>-->
 
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>${maven.compiler.version}</version>
-                <configuration>
-                    <source>1.8</source>
-                    <target>1.8</target>
-                </configuration>
-            </plugin>
-        </plugins>
+        <!--<plugins>-->
+            <!--<plugin>-->
+                <!--<groupId>org.apache.maven.plugins</groupId>-->
+                <!--<artifactId>maven-compiler-plugin</artifactId>-->
+                <!--<version>${maven.compiler.version}</version>-->
+                <!--<configuration>-->
+                    <!--<source>1.8</source>-->
+                    <!--<target>1.8</target>-->
+                <!--</configuration>-->
+            <!--</plugin>-->
+        <!--</plugins>-->
 
-    </build>
+    <!--</build>-->
 
 
 
